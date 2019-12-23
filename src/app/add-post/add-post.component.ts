@@ -15,7 +15,7 @@ export class AddPostComponent implements OnInit {
   postPayload: PostPayload;
   title = new FormControl('');
   body = new FormControl('');
-  
+
 
   constructor(private addpostService: AddPostService, private router: Router) {
     this.addPostForm = new FormGroup({
@@ -23,13 +23,13 @@ export class AddPostComponent implements OnInit {
       body: this.body
     });
     this.postPayload = {
-      postid: '',
+      postId: '',
       content: '',
       title: '',
       username: ''
     };
   }
-   
+
 
   ngOnInit() {
   }

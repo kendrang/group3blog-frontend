@@ -11,12 +11,12 @@ import {LocalStorageService} from 'ngx-webstorage';
   providedIn: 'root'
 })
 export class AuthService {
-  
+
   private url = 'http://localhost:8080/';
 
   constructor(private httpClient : HttpClient, private localStorageService: LocalStorageService) { }
 
-  register(registerPayload: RegisterPayload) :Observable<any> {
+  register(registerPayload: RegisterPayload) : Observable<any> {
     return this.httpClient.post(this.url + 'api/auth/signup', registerPayload);
   }
 
@@ -27,8 +27,8 @@ export class AuthService {
       return true;
     }));
   }
-  isAuthenticated() : Boolean {
-    return this.localStorageService.retrieve('username') !=null;
+  isAuthenticated(): boolean {
+    return this.localStorageService.retrieve('username') != null;
   }
 
 }

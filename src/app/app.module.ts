@@ -6,10 +6,10 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterSuccessComponent } from './auth/register-success/register-success.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import {RouterModule} from '@angular/router';
-import {NgxWebstorageModule} from 'ngx-webstorage';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { NgxWebstorageModule } from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
@@ -43,11 +43,12 @@ import { PostComponent } from './post/post.component';
       {path: 'login', component: LoginComponent},
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'home', component: HomeComponent},
-      {path:'add-post', component: AddPostComponent},
-      {path: 'post/:postid', component: PostComponent}
+      {path: 'add-post', component: AddPostComponent},
+      {path: 'post/:postId', component: PostComponent}
     ])
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
