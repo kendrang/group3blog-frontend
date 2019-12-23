@@ -27,16 +27,16 @@ constructor(private authService: AuthService, private router: Router) {
 
   ngOnInit() {
   }
-  onSubmit(){
+  onSubmit() {
     this.loginPayload.username = this.loginForm.get('username').value;
     this.loginPayload.password = this.loginForm.get('password').value;
 
-   
+
     this.authService.login(this.loginPayload).subscribe(data => {
       if (data) {
         console.log('login success');
         this.router.navigateByUrl('/home');
-      
+
       } else {
         console.log('Login failed');
       }

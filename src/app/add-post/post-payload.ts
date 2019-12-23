@@ -1,6 +1,5 @@
-export class PostPayload{
-    id: String;
-    content: String;
-    title: String;
-    username: String
+export class PostPayload {
+    content: string;
+    title: string;
+    username: string;
 }

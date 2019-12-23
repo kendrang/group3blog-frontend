@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class AddPostComponent implements OnInit {
 
-postPayload: PostPayload;
 addPostForm: FormGroup;
+postPayload: PostPayload;
 title = new FormControl('');
 body = new FormControl('');
 
@@ -22,25 +22,23 @@ body = new FormControl('');
       body: this.body
     });
     this.postPayload = {
-      id: '',
-      content: '',
       title: '',
+      content: '',
       username: ''
-
-    }
+    };
    }
 
   ngOnInit() {
   }
-  
-  addPost(){
+
+  addPost() {
     this.postPayload.content = this.addPostForm.get('body').value;
     this.postPayload.title = this.addPostForm.get('title').value;
     this.addPostService.addPost(this.postPayload).subscribe(data => {
       this.router.navigateByUrl('/');
     }, error => {
       console.log('Failure Response');
-    })
+    });
   }
 
 }
