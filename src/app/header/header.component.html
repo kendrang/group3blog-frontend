@@ -7,10 +7,11 @@
 
             <div class= "col-md-3" *ngIf="authService.isAuthenticated()">
                 <a href="/add-post" class = "new-post" >Add Post</a>
-
+                <button class="logout btn btn-default" (click) = "logout()">Logout</button>
             </div>
+           
 
-            <div class = "col-md-3">
+            <div class = "col-md-3" *ngIf="!authService.isAuthenticated()">
                 <a routerLink="login" class= "login btn btn-default">Login</a>
                 <a routerLink="register" class= "register btn btn-default">Register</a>
 
