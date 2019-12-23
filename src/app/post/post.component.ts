@@ -17,7 +17,7 @@ export class PostComponent implements OnInit {
 
   ngOnInit() {
     this.router.params.subscribe(params => {
-      this.permaLink =  params['id'];
+      this.permaLink =  params['postId'];
     });
 
     this.postService.getPost(this.permaLink).subscribe((data:PostPayload) => {

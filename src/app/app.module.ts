@@ -44,7 +44,7 @@ import { PostComponent } from './post/post.component';
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'home', component: HomeComponent},
       {path:'add-post', component: AddPostComponent},
-      {path: 'post/:postid', component: PostComponent}
+      {path: 'post/:postId', component: PostComponent}
     ])
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
