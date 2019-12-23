@@ -11,17 +11,11 @@ import {Router} from '@angular/router';
 })
 export class AddPostComponent implements OnInit {
 
-<<<<<<< HEAD
   addPostForm: FormGroup;
   postPayload: PostPayload;
   title = new FormControl('');
   body = new FormControl('');
-=======
-addPostForm: FormGroup;
-postPayload: PostPayload;
-title = new FormControl('');
-body = new FormControl('');
->>>>>>> f66112250547023d95fef83cd40c85c8b583d307
+  
 
   constructor(private addpostService: AddPostService, private router: Router) {
     this.addPostForm = new FormGroup({
@@ -29,21 +23,13 @@ body = new FormControl('');
       body: this.body
     });
     this.postPayload = {
-<<<<<<< HEAD
       postid: '',
       content: '',
-=======
->>>>>>> f66112250547023d95fef83cd40c85c8b583d307
       title: '',
-      content: '',
       username: ''
-<<<<<<< HEAD
-    }
-  }
-=======
     };
-   }
->>>>>>> f66112250547023d95fef83cd40c85c8b583d307
+  }
+   
 
   ngOnInit() {
   }
