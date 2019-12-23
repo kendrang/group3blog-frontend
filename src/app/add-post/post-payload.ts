@@ -1,5 +1,5 @@
 export class PostPayload{
-    id: String;
+    postid: String;
     content: String;
     title: String;
     username: String
