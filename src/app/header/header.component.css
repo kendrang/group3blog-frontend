@@ -1,8 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .header{
+    font-family: Tahoma, sans-serif ;
     padding:5px 20px;
-    background: linear-gradient(#29fff2, #5363e0);
+    background: #5bc6f7;
 }
 
 .title{
