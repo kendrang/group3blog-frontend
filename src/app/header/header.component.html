@@ -8,7 +8,9 @@
 
             <div class= "col-md-3" *ngIf="authService.isAuthenticated()">
                 <a routerLink="add-post" class = "new-post" >Add Post</a>
-                <button class="logout btn btn-default" (click) = "logout()">Logout</button>
+                <a routerLink="uploadimage" class = "new-image" >Upload Image</a>
+
+              <button class="logout btn btn-default" (click) = "logout()">Logout</button>
             </div>
 
 
