@@ -13,12 +13,12 @@ export class AddPostService {
    }
 
    addPost(postPayload: PostPayload){
-    return this.httpClient.post('http://localhost:8080/api/posts/', postPayload);
+    return this.httpClient.post('https://zcw-group3blogproject.cfapps.io/api/posts/', postPayload);
   }
   getAllPosts(): Observable<Array<PostPayload>>{
-    return this.httpClient.get<Array<PostPayload>>("http://localhost:8080/api/posts");
+    return this.httpClient.get<Array<PostPayload>>("https://zcw-group3blogproject.cfapps.io/api/posts");
   }
   getPost(permaLink: Number):Observable<PostPayload>{
-    return this.httpClient.get<PostPayload>('http://localhost:8080/api/posts/get/' + permaLink);
+    return this.httpClient.get<PostPayload>('https://zcw-group3blogproject.cfapps.io/api/posts/get/' + permaLink);
   }
 }

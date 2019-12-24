@@ -12,7 +12,7 @@ import {LocalStorageService} from 'ngx-webstorage';
 })
 export class AuthService {
 
-  private url = 'http://localhost:8080/';
+  private url = 'https://zcw-group3blogproject.cfapps.io/';
 
   constructor(private httpClient : HttpClient, private localStorageService: LocalStorageService) { }
 
