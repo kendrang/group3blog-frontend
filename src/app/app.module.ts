@@ -16,6 +16,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { HttpClientInterceptor } from './http-client-interceptor';
 import { PostComponent } from './post/post.component';
 import { AuthGuard } from './auth.guard';
+import { CommentComponent } from './comment/comment.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AuthGuard } from './auth.guard';
     HomeComponent,
     AddPostComponent,
     PostComponent,
+    CommentComponent,
 
   ],
   imports: [
@@ -45,7 +47,8 @@ import { AuthGuard } from './auth.guard';
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'home', component: HomeComponent},
       {path: 'add-post', component: AddPostComponent, canActivate:[AuthGuard]},
-      {path: 'post/:postId', component: PostComponent}
+      {path: 'post/:postId', component: PostComponent},
+      {path: 'comment', component: CommentComponent}
     ])
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
