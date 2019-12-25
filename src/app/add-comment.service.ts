@@ -1,7 +1,7 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {CommentPayload} from "./add-comment/comment-payload";
-import {Observable} from "rxjs";
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {CommentPayload} from './add-comment/comment-payload';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +23,4 @@ export class AddCommentService {
   getComment(permaLink: Number):Observable<CommentPayload>{
     return this.httpClient.get<CommentPayload>('https://zcw-group3blogproject.cfapps.io/api/comments/get/' + permaLink);
   }
-  //lint
 }
