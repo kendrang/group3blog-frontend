@@ -17,6 +17,7 @@ import { HttpClientInterceptor } from './http-client-interceptor';
 import { PostComponent } from './post/post.component';
 import { AuthGuard } from './auth.guard';
 import { CommentComponent } from './comment/comment.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CommentComponent } from './comment/comment.component';
     AddPostComponent,
     PostComponent,
     CommentComponent,
+    AddCommentComponent,
 
   ],
   imports: [
