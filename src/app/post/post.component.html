@@ -6,13 +6,15 @@
         <div class="col-md-8">
           <h1 class="blog-title">{{post.title}}</h1>
           <span>
-                    <p>by {{post.username}}</p>
+                    <p>this is by {{post.username}}</p>
                 </span>
           <hr>
           <p [innerHTML]="post.content"></p>
           <hr>
+          <div><a routerLink="add-comment" class="myButton">Comment</a></div>
         </div>
       </div>
   
     </div>
+    
   </div>

@@ -50,7 +50,8 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
       {path: 'home', component: HomeComponent},
       {path: 'add-post', component: AddPostComponent, canActivate:[AuthGuard]},
       {path: 'post/:postId', component: PostComponent},
-      {path: 'comment', component: CommentComponent}
+      {path: 'comment', component: CommentComponent},
+      {path: 'post/:postId/add-comment', component: AddCommentComponent}
     ])
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
