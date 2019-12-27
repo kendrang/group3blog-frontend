@@ -16,8 +16,8 @@ export class AddCommentService {
     return this.httpClient.post('https://zcw-group3blogproject.cfapps.io/api/comments', commentPayLoad);
   }
 
-  getAllComments(): Observable<Array<CommentPayload>>{
-    return this.httpClient.get<Array<CommentPayload>>('https://zcw-group3blogproject.cfapps.io/api/comments');
+  getAllComments(postId: Number): Observable<Array<CommentPayload>>{
+    return this.httpClient.get<Array<CommentPayload>>('https://zcw-group3blogproject.cfapps.io/api/comments/post/' + postId);
   }
 
   getComment(permaLink: Number):Observable<CommentPayload>{

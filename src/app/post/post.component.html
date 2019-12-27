@@ -6,15 +6,29 @@
         <div class="col-md-8">
           <h1 class="blog-title">{{post.title}}</h1>
           <span>
-                    <p>this is by {{post.username}}</p>
+                    <p>Author: {{post.username}}</p>
                 </span>
+                
           <hr>
-          <p [innerHTML]="post.content"></p>
+          <p [innerHTML]="post.content"> </p>
           <hr>
-          <div><a routerLink="add-comment" class="myButton">Comment</a></div>
+          <h3>Comments:</h3>
+          <div class="row" *ngFor="let comment of comments | async">
+            <div class="blogcomments">
+              {{comment.content}}
+            </div>
+          </div>
+          <div><a routerLink="add-comment" class="myButton">Add Comment</a></div>
         </div>
       </div>
   
     </div>
     
-  </div>
+  <!-- <div class="commentcontainer">
+    <div class="row" *ngFor="let comment of comments | async">
+      <div class="blogcomments">
+        <p></p> {{"comment.content"}}></p></p>>
+      </div>
+    </div>
+  </div> -->
+</div>
