@@ -46,7 +46,7 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
       {path: 'login', component: LoginComponent},
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'home', component: HomeComponent},
-      {path: 'add-post', component: AddPostComponent, canActivate:[AuthGuard]},
+      {path: 'add-post', component: AddPostComponent, canActivate: [AuthGuard]},
       {path: 'post/:postId', component: PostComponent},
       {path: 'uploadimage', component: UploadImageComponent}
     ])

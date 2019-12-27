@@ -12,13 +12,13 @@ export class AddPostService {
 
    }
 
-   addPost(postPayload: PostPayload){
+   addPost(postPayload: PostPayload) {
     return this.httpClient.post('https://zcw-group3blogproject.cfapps.io/api/posts/', postPayload);
   }
-  getAllPosts(): Observable<Array<PostPayload>>{
-    return this.httpClient.get<Array<PostPayload>>("https://zcw-group3blogproject.cfapps.io/api/posts");
+  getAllPosts(): Observable<Array<PostPayload>> {
+    return this.httpClient.get<Array<PostPayload>>('https://zcw-group3blogproject.cfapps.io/api/posts');
   }
-  getPost(permaLink: Number):Observable<PostPayload>{
+  getPost(permaLink: number): Observable<PostPayload> {
     return this.httpClient.get<PostPayload>('https://zcw-group3blogproject.cfapps.io/api/posts/get/' + permaLink);
   }
 }
