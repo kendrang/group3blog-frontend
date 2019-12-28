@@ -17,6 +17,8 @@ import { HttpClientInterceptor } from './http-client-interceptor';
 import { PostComponent } from './post/post.component';
 import { AuthGuard } from './auth.guard';
 import { UploadImageComponent } from './upload-image/upload-image.component';
+import { CommentComponent } from './comment/comment.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     AddPostComponent,
     PostComponent,
     UploadImageComponent,
+    CommentComponent,
+    AddCommentComponent,
 
   ],
   imports: [
@@ -48,7 +52,9 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
       {path: 'home', component: HomeComponent},
       {path: 'add-post', component: AddPostComponent, canActivate: [AuthGuard]},
       {path: 'post/:postId', component: PostComponent},
-      {path: 'uploadimage', component: UploadImageComponent}
+      {path: 'uploadimage', component: UploadImageComponent},
+      {path: 'comment', component: CommentComponent},
+      {path: 'post/:postId/add-comment', component: AddCommentComponent}
     ])
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
