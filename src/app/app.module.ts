@@ -16,6 +16,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { HttpClientInterceptor } from './http-client-interceptor';
 import { PostComponent } from './post/post.component';
 import { AuthGuard } from './auth.guard';
+import { UploadImageComponent } from './upload-image/upload-image.component';
 import { CommentComponent } from './comment/comment.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 
@@ -30,6 +31,7 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     HomeComponent,
     AddPostComponent,
     PostComponent,
+    UploadImageComponent,
     CommentComponent,
     AddCommentComponent,
 
@@ -48,8 +50,9 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
       {path: 'login', component: LoginComponent},
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'home', component: HomeComponent},
-      {path: 'add-post', component: AddPostComponent, canActivate:[AuthGuard]},
+      {path: 'add-post', component: AddPostComponent, canActivate: [AuthGuard]},
       {path: 'post/:postId', component: PostComponent},
+      {path: 'uploadimage', component: UploadImageComponent},
       {path: 'comment', component: CommentComponent},
       {path: 'post/:postId/add-comment', component: AddCommentComponent}
     ])
