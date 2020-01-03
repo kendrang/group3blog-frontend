@@ -19,8 +19,6 @@ import { AuthGuard } from './auth.guard';
 import { UploadImageComponent } from './upload-image/upload-image.component';
 import { CommentComponent } from './comment/comment.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
-import {FileUploadModule} from 'ng2-file-upload';
-import { ImageUploadComponent } from './image-upload/image-upload.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +32,7 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
     PostComponent,
     UploadImageComponent,
     CommentComponent,
-    AddCommentComponent,
-    ImageUploadComponent
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,
