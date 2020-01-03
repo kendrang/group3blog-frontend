@@ -23,3 +23,15 @@
     color: aliceblue;
     padding-top: 17px;
 }
+
+
+img {
+    vertical-align: top;
+}
+
+
+.demo-1 a {
+    position: absolute;
+    left: 850px;
+    top: -10px;
+}

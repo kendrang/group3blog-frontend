@@ -3,12 +3,22 @@
         <div class = "row">
             <div class = "col-md-6">
                 <a href=""><img src="https://fontmeme.com/permalink/191223/de62504de6db38dfc1977a2cfe5408a3.png" alt="twitter-font "class = "title" border="0"></a>
+                <div class="demo-1">
+                
+                    <a href="#"><img src="https://files.slack.com/files-pri/T246Q4801-FS91V3GSC/stabbr_logo.png" width="170px" ></a>
+
+            </div> 
+
                 <h3><a href="" class = "title"></a></h3>
             </div> <!-- Title-->
 
+
+         
+
+
             <div class= "col-md-3" *ngIf="authService.isAuthenticated()">
                 <a routerLink="add-post" class = "new-post" >Add Post</a>
-                <a routerLink="uploadimage" class = "new-image" >Upload Image</a>
+    
 
               <button class="logout btn btn-default" (click) = "logout()">Logout</button>
             </div>

@@ -4,12 +4,12 @@
         <div class="blogpost">
           <h3><a routerLink="/post/{{post.postId}}" class="blog-title"><b>{{post.title}}</b></a></h3>
           <div>
-            <i class="fas fa-user"></i> Author: <p>{{post.username}}</p>
+            <i class="fas fa-user"></i> <b>Author:</b> <i><p>{{post.username}}</p></i>
           </div>
           <p [innerHTML]="post.content"></p>
           <div>
 
-            <a routerLink="/post/{{post.postId}}" class="myButton">Take a Stabb at it 🔪</a>
+            <a routerLink="/post/{{post.postId}}" class="btn btn-primary">Take a Stabb at it 🔪</a>
 
           </div>
           <hr>
