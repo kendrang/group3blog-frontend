@@ -20,7 +20,6 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
 import { CommentComponent } from './comment/comment.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +32,7 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     PostComponent,
     UploadImageComponent,
     CommentComponent,
-    AddCommentComponent,
-
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,
