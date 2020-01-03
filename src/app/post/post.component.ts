@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {AddPostService} from '../add-post.service';
-import {PostPayload} from '../add-post/post-payload';
+import {CreateCampaignService} from '../create-campaign.service';
+import {CampaignPayload} from '../create-campaign/campaign-payload';
 import {CommentPayload} from '../add-comment/comment-payload';
 import {AddCommentService} from '../add-comment.service';
 import { Observable } from 'rxjs';
@@ -13,11 +13,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  post: PostPayload;
+  post: CampaignPayload;
   permaLink: number;
   comments: Observable<Array<CommentPayload>>
 
-  constructor(private router: ActivatedRoute, private postService: AddPostService, private commentService: AddCommentService) {
+  constructor(private router: ActivatedRoute, private postService: CreateCampaignService, private commentService: AddCommentService) {
   }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class PostComponent implements OnInit {
       this.permaLink = params['postId'];
     });
 
-    this.postService.getPost(this.permaLink).subscribe((data: PostPayload) => {
+    this.postService.getPost(this.permaLink).subscribe((data: CampaignPayload) => {
       this.post = data;
       console.log('data');
 
