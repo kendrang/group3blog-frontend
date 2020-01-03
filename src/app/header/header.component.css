@@ -1,8 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .header{
+    font-family: Tahoma, sans-serif ;
     padding:5px 20px;
-    background-color: royalblue;
+    background: #5bc6f7;
 }
 
 .title{
@@ -17,7 +18,7 @@
     padding-top: 10px;
 }
 
-.new-post{
+.logout,.new-post,.new-image{
     float: right;
     color: aliceblue;
     padding-top: 17px;

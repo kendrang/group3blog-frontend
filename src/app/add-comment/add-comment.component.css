@@ -1,26 +1,22 @@
-.add-post-content{
-    padding-top: 20px;
-  }
-  
-  .new-post-title{
-    color: royalblue;
-  }
-  
-  .form-group{
-    padding-left: 40px;
-    padding-right: 40px;
-    height: 400;
-    width: 200;
+.add-comment-content{
+  padding-top: 20px;
+}
 
-  }
+.form-group{
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 400;
+  width: 200;
 
-  .post-content, .post-title{
-    color: royalblue;
-    
-    padding-right: 50px;
-  }
-  
- .btn{
+}
+
+.comment-content{
+  color: royalblue;
+
+  padding-right: 50px;
+}
+
+.btn{
   background:    #29fff2;
   background:    linear-gradient(#29fff2, #2f44e5);
   border:        2px solid #4947a2;
@@ -32,4 +28,4 @@
   font:          italic bold 25px/1 "Ubuntu", sans-serif;
   text-align:    center;
 
- }
+}
