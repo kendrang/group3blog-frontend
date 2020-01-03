@@ -1,11 +1,11 @@
-.add-post-content{
+.create-campaign{
     padding-top: 20px;
   }
-  
-  .new-post-title{
+
+  .inputCampaignName{
     color: royalblue;
   }
-  
+
   .form-group{
     padding-left: 40px;
     padding-right: 40px;
@@ -14,12 +14,12 @@
 
   }
 
-  .post-content, .post-title{
+  .inputCampaignDescription, .inputCampaignName, .inputCampaignEdition{
     color: royalblue;
-    
+
     padding-right: 50px;
   }
-  
+
  .btn{
   background:    #29fff2;
   background:    linear-gradient(#29fff2, #2f44e5);
