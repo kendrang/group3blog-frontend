@@ -4,7 +4,8 @@ import {AddPostService} from '../add-post.service';
 import {PostPayload} from '../add-post/post-payload';
 import {CommentPayload} from '../add-comment/comment-payload';
 import {AddCommentService} from '../add-comment.service';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 // @ts-ignore
 @Component({
@@ -17,7 +18,7 @@ export class PostComponent implements OnInit {
   permaLink: number;
   comments: Observable<Array<CommentPayload>>
 
-  constructor(private router: ActivatedRoute, private postService: AddPostService, private commentService: AddCommentService) {
+  constructor(private router: ActivatedRoute, private postService: AddPostService, private commentService: AddCommentService, private httpClient: HttpClient) {
   }
 
   ngOnInit() {
@@ -36,5 +37,6 @@ export class PostComponent implements OnInit {
    this.comments = this.commentService.getAllComments(this.permaLink);
   }
 
-}
+  }
+
 1

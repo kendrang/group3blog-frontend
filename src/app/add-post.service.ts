@@ -12,7 +12,7 @@ export class AddPostService {
 
    }
 
-   addPost(postPayload: PostPayload) {
+  addPost(postPayload: PostPayload) {
     return this.httpClient.post('https://zcw-group3blogproject.cfapps.io/api/posts/', postPayload);
   }
   getAllPosts(): Observable<Array<PostPayload>> {
@@ -21,4 +21,5 @@ export class AddPostService {
   getPost(permaLink: number): Observable<PostPayload> {
     return this.httpClient.get<PostPayload>('https://zcw-group3blogproject.cfapps.io/api/posts/get/' + permaLink);
   }
+
 }
