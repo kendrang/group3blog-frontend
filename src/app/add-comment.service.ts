@@ -13,14 +13,14 @@ export class AddCommentService {
   }
 
   addComment(commentPayLoad: CommentPayload){
-    return this.httpClient.post('https://zcw-group3blogproject.cfapps.io/api/comments', commentPayLoad);
+    return this.httpClient.post('http://localhost:8080/api/comments', commentPayLoad);
   }
 
-  getAllComments(postId: Number): Observable<Array<CommentPayload>>{
-    return this.httpClient.get<Array<CommentPayload>>('https://zcw-group3blogproject.cfapps.io/api/comments/post/' + postId);
+  getAllComments(postId: number): Observable<Array<CommentPayload>> {
+    return this.httpClient.get<Array<CommentPayload>>('http://localhost:8080/api/comments/post/' + postId);
   }
 
-  getComment(permaLink: Number):Observable<CommentPayload>{
-    return this.httpClient.get<CommentPayload>('https://zcw-group3blogproject.cfapps.io/api/comments/get/' + permaLink);
+  getComment(permaLink: number): Observable<CommentPayload> {
+    return this.httpClient.get<CommentPayload>('http://localhost:8080//api/comments/get/' + permaLink);
   }
 }

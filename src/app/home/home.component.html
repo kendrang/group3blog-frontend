@@ -6,11 +6,9 @@
           <div>
             <i class="fas fa-user"></i> <b>Author:</b> <i><p>{{post.username}}</p></i>
           </div>
-          <p [innerHTML]="post.content"></p>
+          <p [innerHTML]="post.content | safeUrl | sanitizeHtml" ></p>
           <div>
-
             <a routerLink="/post/{{post.postId}}" class="btn btn-primary">Take a Stabb at it 🔪</a>
-
           </div>
           <hr>
         </div>
@@ -19,4 +17,3 @@
     </div>
   </div>
 
-  

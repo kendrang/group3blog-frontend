@@ -1,5 +1,3 @@
-
-
 <div class="add-post-content">
     <div class="container">
       <div>
@@ -12,18 +10,7 @@
           <input type="text" [formControlName]="'title'" class="form-control" placeholder="Title">
         </div>
         <div class="form-group">
-          <label class="post-content"></label>
-
-          <textarea id="editor" [formControlName]="'body'"></textarea>
-
-<!--          <editor [formControlName]="'body'" [init]="{-->
-<!--            plugins: 'image code',-->
-<!--            force_br_newlines : true,-->
-<!--            force_p_newlines : false,-->
-<!--            forced_root_block:''-->
-<!--          }"></editor>-->
-
-
+        <app-control-content></app-control-content>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary">Stabb it</button>

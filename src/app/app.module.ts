@@ -19,6 +19,13 @@ import { AuthGuard } from './auth.guard';
 import { UploadImageComponent } from './upload-image/upload-image.component';
 import { CommentComponent } from './comment/comment.component';
 import { AddCommentComponent } from './add-comment/add-comment.component';
+import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
+import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
+import { DropDownListComponent } from '@syncfusion/ej2-angular-dropdowns';
+import { DialogModule } from '@syncfusion/ej2-angular-popups';
+import { SftexteditortemplateComponent } from './sftexteditortemplate/sftexteditortemplate.component';
+import {SafeUrlPipe} from './safe-url-pipe.service';
+import {SafeHtmlPipe} from './safe-html-pipe.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +39,11 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     PostComponent,
     UploadImageComponent,
     CommentComponent,
-    AddCommentComponent
+    AddCommentComponent,
+    SftexteditortemplateComponent,
+    SftexteditortemplateComponent,
+    [SafeUrlPipe],
+    [SafeHtmlPipe]
   ],
   imports: [
     BrowserModule,
@@ -42,6 +53,9 @@ import { AddCommentComponent } from './add-comment/add-comment.component';
     NgxWebstorageModule.forRoot(),
     HttpClientModule,
     EditorModule,
+    ButtonModule,
+    RichTextEditorAllModule,
+    DialogModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'register', component: RegisterComponent},
