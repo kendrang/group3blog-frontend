@@ -15,7 +15,7 @@ export class AddPostComponent implements OnInit {
   addPostForm: FormGroup;
   postPayload: PostPayload;
   title = new FormControl('');
-  body = new FormControl();
+  value = new FormControl();
 
   constructor(private addpostService: AddPostService, private router: Router, private sanitizer: DomSanitizer) {
     this.addPostForm = new FormGroup({
@@ -25,7 +25,7 @@ export class AddPostComponent implements OnInit {
     this.postPayload = {
       postId: '',
       username: '',
-      content: new Blob(),
+      content: '',
       title: ''
     };
   }
@@ -34,8 +34,8 @@ export class AddPostComponent implements OnInit {
   }
 
   addPost() {
-    // console.log(this.addPostForm.get('body'));
-    // this.postPayload.content = this.addPostForm.get('body').value;
+    console.log(this.addPostForm.get('body'));
+    this.postPayload.content = this.addPostForm.get('value').value;
     this.postPayload.title = this.addPostForm.get('title').value;
     this.addpostService.addPost(this.postPayload).subscribe(data => {
       this.router.navigateByUrl('/');

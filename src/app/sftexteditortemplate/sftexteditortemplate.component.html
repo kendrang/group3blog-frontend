@@ -1,3 +1,1 @@
-  <ejs-richtexteditor [insertImageSettings]='imageSetting'>
-    <button type="submit" ejs-button>Submit</button>
-  </ejs-richtexteditor>
+<ejs-richtexteditor [insertImageSettings]="imageSetting" #templateRTE id="name" #name='ngModel' [(value)]='value' required name="name" [(ngModel)]="value" (created)="rteCreated()"></ejs-richtexteditor>

@@ -1,6 +1,6 @@
 export class PostPayload {
     postId: string;
-    content: Blob;
+    content: string;
     title: string;
     username: string;
 }
